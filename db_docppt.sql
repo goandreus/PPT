@@ -35,7 +35,7 @@ CREATE TABLE `user` (
   `type_idtype` int(11) NOT NULL,
   `departament_iddepartament` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
+ 
 --
 -- Volcado de datos para la tabla `user`
 --

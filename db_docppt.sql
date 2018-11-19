@@ -39,7 +39,7 @@ CREATE TABLE `user` (
 --
 -- Volcado de datos para la tabla `user`
 --
-
+ 
 INSERT INTO `user` (`iduser`, `name_user`, `lastname_user`, `email`, `password`, `type_idtype`, `departament_iddepartament`) VALUES
 (1, 'Giampieer', 'Mariscal', 'giampieer24@gmail.com', '111111', 1, 1),
 (2, 'Giampieer', 'Mariscal', 'giampieer2424@gmail.com', '111111', 2, 17);

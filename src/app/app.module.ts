@@ -68,3 +68,4 @@ import { BackgroundMode } from "@ionic-native/background-mode";
   ]
 })
 export class AppModule {}
+ 

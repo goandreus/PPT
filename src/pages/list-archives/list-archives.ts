@@ -23,7 +23,7 @@ export class ListArchivesPage {
     this.idDepartament =this.navParams.data.idDepartament;
     console.log(this.idDepartament);
   }
-
+ 
   async ionViewWillEnter() {
     await this.all();
   }

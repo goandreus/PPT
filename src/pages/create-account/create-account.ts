@@ -12,7 +12,7 @@ import {SeleccionPage} from "../seleccion/seleccion";
 export class CreateAccountPage {
   FrmLogin: FormGroup;
   tabBarElement : any;
-  loginData : any;
+  loginData : any; 
   data: any;
 
   constructor(public navCtrl: NavController,  private backgroundMode: BackgroundMode, private alertCtrl: AlertController, public  restApi : RestapiProvider, public formBuilder: FormBuilder, private toastCtrl: ToastController) {

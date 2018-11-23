@@ -16,7 +16,7 @@ export class ContactPage {
 
   }
 
-  async ionViewWillEnter() {
+  async ionViewWillEnter() { 
     await this.all();
   }
 

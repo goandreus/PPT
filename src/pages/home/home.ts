@@ -10,7 +10,7 @@ import {RestapiProvider} from "../../providers/restapi/restapi";
 export class HomePage {
   file: File;
   frmUploadPdf: FormGroup;
-
+ 
   constructor(public navCtrl: NavController,
               private restApi: RestapiProvider) {
     this.frmUploadPdf = new FormGroup({

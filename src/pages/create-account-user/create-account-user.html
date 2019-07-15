@@ -1,0 +1,46 @@
+<ion-header no-border>
+  <ion-navbar color="primary">
+  </ion-navbar>
+</ion-header>
+<ion-content class="color-content" padding>
+  <form [formGroup]="FrmLogin" (ngSubmit)="createAdmin()">
+    <ion-row style="background-color: #2E7D32">
+      <ion-col col-12 class="column">
+        <ion-title>REGISTRO DE USUARIO</ion-title>
+      </ion-col>
+    </ion-row>
+    <ion-item style="background-color: #2E7D32">
+      <ion-label floating style="color: #222222">NOMBRES:</ion-label>
+      <ion-input formControlName="name" type="text"></ion-input>
+    </ion-item>
+    <ion-item style="background-color: #2E7D32" *ngIf="FrmLogin.controls.name.hasError('required') && FrmLogin.controls.name.touched">
+      <p class="warning" style="color: #222222">Este campo es obligatorio</p>
+    </ion-item>
+    <ion-item style="background-color: #2E7D32">
+      <ion-label floating style="color: #222222">APELLIDOS:</ion-label>
+      <ion-input formControlName="last_name" type="text"></ion-input>
+    </ion-item>
+    <ion-item style="background-color: #2E7D32" *ngIf="FrmLogin.controls.last_name.hasError('required') && FrmLogin.controls.last_name.touched">
+      <p class="warning" style="color: #222222">Este campo es obligatorio</p>
+    </ion-item>
+    <ion-item style="background-color: #2E7D32">
+      <ion-label floating style="color: #222222">CORREO ELECTRONICO:</ion-label>
+      <ion-input formControlName="email" type="text"></ion-input>
+    </ion-item>
+    <ion-item style="background-color: #2E7D32" *ngIf="FrmLogin.controls.email.hasError('required') && FrmLogin.controls.email.touched">
+      <p class="warning" style="color: #222222">Este campo es obligatorio</p>
+    </ion-item>
+    <ion-item style="background-color: #2E7D32">
+      <ion-label floating style="color: #222222">PASSWORD:</ion-label>
+      <ion-input formControlName="password" type="password"></ion-input>
+    </ion-item>
+    <ion-item style="background-color: #2E7D32" *ngIf="FrmLogin.controls.password.hasError('required') && FrmLogin.controls.password.touched">
+      <p class="warning" style="color: #222222">Este campo es obligatorio</p>
+    </ion-item>
+    <ion-row>
+      <ion-col class="column">
+        <button ion-button color="orange800" [disabled]="!FrmLogin.valid" type="submit" outline>Ingresar</button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

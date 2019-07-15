@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      About
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="frmUploadPpt">
+    <ion-item>
+      <ion-label color="primary" stacked>Seleccione</ion-label>
+      <ion-input type="file" accept=".ppt,.pptx" formControlName="file" (change)="changeListener($event)"></ion-input>
+    </ion-item>
+
+    <button ion-button [disabled]="!frmUploadPpt.valid" (click)="uploadPpt()">Agregar</button>
+  </form>
+</ion-content>

@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>ppp</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="frmUploadPdf">
+    <ion-item>
+      <ion-label color="primary" stacked>Seleccione</ion-label>
+      <ion-input type="file" accept="application/pdf" formControlName="file" (change)="changeListener($event)"></ion-input>
+    </ion-item>
+
+    <button ion-button [disabled]="!frmUploadPdf.valid" (click)="upload()">Agregar</button>
+  </form>
+</ion-content>

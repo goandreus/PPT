@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Contact
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngFor="let doc of list">
+    <ion-item (click)="open(doc)">
+      {{doc.type}}<br>
+      {{doc.url}}
+    </ion-item>
+  </ion-list>
+</ion-content>

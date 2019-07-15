@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title align="center">ARCHIVOS PPT</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="closeSesion()">
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="color-content" padding>
+  LOS ARCHIVOS SON DE LOS ULTIMOS DIAS:
+  <ion-list *ngFor="let doc of list">
+      <ion-card>
+        <ion-item>
+          <ion-avatar item-start>
+            <img src="assets/imgs/ppt.png">
+          </ion-avatar>
+          <h2>{{doc.type}} - {{doc.name_archive}}</h2>
+          <p>{{doc.datetime}}</p>
+        </ion-item>
+        <ion-row>
+          <ion-col>
+            <button ion-button icon-start clear small (click)="open(doc)">
+              <ion-icon name="eye"></ion-icon>
+              <div>VISUALIZAR</div>
+            </button>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+  </ion-list>
+</ion-content>
